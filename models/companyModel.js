@@ -17,13 +17,4 @@ const companySchema = new Schema({
 
 const Company = mongoose.model("company", companySchema);
 
-const validate = (data) => {
-	const schema = Joi.object({
-		name: Joi.string().required(),
-        monthofapp : Joi.mon
-		password: passwordComplexity().required().label("Password"),
-	});
-	return schema.validate(data);
-};
-
 module.exports = Company;
